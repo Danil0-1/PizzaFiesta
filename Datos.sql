@@ -60,5 +60,5 @@ INSERT INTO ingrediente_extra (cantidad, detalle_pedido_id, ingrediente_id) VALU
 (2, 3, 5); 
 
 INSERT INTO factura (cliente, total, fecha, pedido_id, cliente_id) VALUES
-('Juan Pérez', 17.00, '2024-06-10 13:00:00', 1, 1),
-('María Gómez', 24.00, '2024-06-11 15:30:00', 2, 2);
+('Danilo Muskus', 17.00, '2024-06-10 13:00:00', 1, 1),
+('Nicolas Muskus', 24.00, '2024-06-11 15:30:00', 2, 2);

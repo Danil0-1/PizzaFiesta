@@ -72,28 +72,79 @@ CREATE TABLE `producto_presentacion`(
     `precio` DECIMAL(10, 2) NOT NULL
 );
 ALTER TABLE
-    `ingredientes_extra` ADD CONSTRAINT `ingredientes_extra_ingrediente_id_foreign` FOREIGN KEY(`ingrediente_id`) REFERENCES `ingrediente`(`id`);
+    `ingredientes_extra`
+    ADD CONSTRAINT `ingredientes_extra_ingrediente_id_foreign`
+    FOREIGN KEY(`ingrediente_id`)
+    REFERENCES `ingrediente`(`id`);
+
 ALTER TABLE
-    `producto` ADD CONSTRAINT `producto_tipo_producto_id_foreign` FOREIGN KEY(`tipo_producto_id`) REFERENCES `tipo_producto`(`id`);
+    `producto`
+    ADD CONSTRAINT `producto_tipo_producto_id_foreign`
+    FOREIGN KEY(`tipo_producto_id`)
+    REFERENCES `tipo_producto`(`id`);
+
 ALTER TABLE
-    `detalle_pedido` ADD CONSTRAINT `detalle_pedido_combo_id_foreign` FOREIGN KEY(`combo_id`) REFERENCES `combo`(`id`);
+    `detalle_pedido`
+    ADD CONSTRAINT `detalle_pedido_combo_id_foreign`
+    FOREIGN KEY(`combo_id`)
+    REFERENCES `combo`(`id`);
+
 ALTER TABLE
-    `pedido` ADD CONSTRAINT `pedido_metodo_pago_id_foreign` FOREIGN KEY(`metodo_pago_id`) REFERENCES `metodo_pago`(`id`);
+    `pedido`
+    ADD CONSTRAINT `pedido_metodo_pago_id_foreign`
+    FOREIGN KEY(`metodo_pago_id`)
+    REFERENCES `metodo_pago`(`id`);
+
 ALTER TABLE
-    `factura` ADD CONSTRAINT `factura_cliente_id_foreign` FOREIGN KEY(`cliente_id`) REFERENCES `cliente`(`id`);
+    `factura`
+    ADD CONSTRAINT `factura_cliente_id_foreign`
+    FOREIGN KEY(`cliente_id`)
+    REFERENCES `cliente`(`id`);
+
 ALTER TABLE
-    `combo_producto` ADD CONSTRAINT `combo_producto_producto_id_foreign` FOREIGN KEY(`producto_id`) REFERENCES `producto`(`id`);
+    `combo_producto`
+    ADD CONSTRAINT `combo_producto_producto_id_foreign`
+    FOREIGN KEY(`producto_id`)
+    REFERENCES `producto`(`id`);
+
 ALTER TABLE
-    `factura` ADD CONSTRAINT `factura_pedido_id_foreign` FOREIGN KEY(`pedido_id`) REFERENCES `pedido`(`id`);
+    `factura`
+    ADD CONSTRAINT `factura_pedido_id_foreign`
+    FOREIGN KEY(`pedido_id`)
+    REFERENCES `pedido`(`id`);
+
 ALTER TABLE
-    `detalle_pedido` ADD CONSTRAINT `detalle_pedido_pedido_id_foreign` FOREIGN KEY(`pedido_id`) REFERENCES `pedido`(`id`);
+    `detalle_pedido`
+    ADD CONSTRAINT `detalle_pedido_pedido_id_foreign`
+    FOREIGN KEY(`pedido_id`)
+    REFERENCES `pedido`(`id`);
+
 ALTER TABLE
-    `producto_presentacion` ADD CONSTRAINT `producto_presentacion_presentacion_id_foreign` FOREIGN KEY(`presentacion_id`) REFERENCES `presentacion`(`id`);
+    `producto_presentacion`
+    ADD CONSTRAINT `producto_presentacion_presentacion_id_foreign`
+    FOREIGN KEY(`presentacion_id`)
+    REFERENCES `presentacion`(`id`);
+
 ALTER TABLE
-    `producto_presentacion` ADD CONSTRAINT `producto_presentacion_producto_id_foreign` FOREIGN KEY(`producto_id`) REFERENCES `producto`(`id`);
+    `producto_presentacion`
+    ADD CONSTRAINT `producto_presentacion_producto_id_foreign`
+    FOREIGN KEY(`producto_id`)
+    REFERENCES `producto`(`id`);
+
 ALTER TABLE
-    `detalle_pedido` ADD CONSTRAINT `detalle_pedido_producto_id_foreign` FOREIGN KEY(`producto_id`) REFERENCES `producto`(`id`);
+    `detalle_pedido`
+    ADD CONSTRAINT `detalle_pedido_producto_id_foreign`
+    FOREIGN KEY(`producto_id`)
+    REFERENCES `producto`(`id`);
+
 ALTER TABLE
-    `ingredientes_extra` ADD CONSTRAINT `ingredientes_extra_detalle_pedido_id_foreign` FOREIGN KEY(`detalle_pedido_id`) REFERENCES `detalle_pedido`(`id`);
+    `ingredientes_extra`
+    ADD CONSTRAINT `ingredientes_extra_detalle_pedido_id_foreign`
+    FOREIGN KEY(`detalle_pedido_id`)
+    REFERENCES `detalle_pedido`(`id`);
+
 ALTER TABLE
-    `combo_producto` ADD CONSTRAINT `combo_producto_combo_id_foreign` FOREIGN KEY(`combo_id`) REFERENCES `combo`(`id`);
+    `combo_producto`
+    ADD CONSTRAINT `combo_producto_combo_id_foreign`
+    FOREIGN KEY(`combo_id`)
+    REFERENCES `combo`(`id`);
