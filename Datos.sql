@@ -1,3 +1,4 @@
+-- Active: 1749583284902@@127.0.0.2@3307@PizzaFiesta
 INSERT INTO tipo_producto (nombre) VALUES
 ('Bebida'),
 ('Pizza');
